@@ -28,12 +28,12 @@ Original Code from HRNet-OCR Official Github
 ### OCR   
 <figure>
   <text-align: center;>
-  <img src="https://github.com/ccalvin97/CV-Semantic-Segmentation-Land/blob/main/graph/Picture3.png" height="400" />
+  <img src="https://github.com/ccalvin97/CV-Semantic-Segmentation-Land/blob/main/graph/Picture3.png" height="250" />
 </figcaption>
 </figure>
 <figure>
   <text-align: center;>
-  <img src="https://github.com/ccalvin97/CV-Semantic-Segmentation-Land/blob/main/graph/Picture2.png" width="900" height="400" />
+  <img src="https://github.com/ccalvin97/CV-Semantic-Segmentation-Land/blob/main/graph/Picture2.png" width="900" height="250" />
 </figure>
 
 ## Pre-train Models  

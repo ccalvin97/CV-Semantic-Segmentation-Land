@@ -7,4 +7,6 @@ CV-Semantic-Segmentation-Land(Multi-class)
 
 </left>
 ### Training / Validation  
+</left>
+
 <div align="center"><img src="https://github.com/ccalvin97/CV-Semantic-Segmentation-Land/blob/main/graph/train.png" width="400"/></center><img src="https://github.com/ccalvin97/CV-Semantic-Segmentation-Land/blob/main/graph/test.png" width="400"/></center>   

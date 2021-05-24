@@ -9,37 +9,172 @@
 **HRNet: https://arxiv.org/pdf/1908.07919.pdf**  
 **OCR: https://arxiv.org/pdf/1909.11065.pdf**  
 
+## Contribution  
+Edited by kuancalvin2016@gmail.com  
+Original Code from HRNet-OCR Official Github  
+
+
 
 ## Introduction
-This is the official code of [high-resolution representations for Semantic Segmentation](https://arxiv.org/abs/1904.04514). 
-We augment the HRNet with a very simple segmentation head shown in the figure below. We aggregate the output representations at four different resolutions, and then use a 1x1 convolutions to fuse these representations. The output representations is fed into the classifier. We evaluate our methods on three datasets, Cityscapes, PASCAL-Context and LIP.
 
+### Backbone
 <!-- ![](figures/seg-hrnet.png) -->
 <figure>
   <text-align: center;>
-  <img src="./figures/seg-hrnet.png" alt="hrnet" title="" width="900" height="150" />
+  <img src="https://github.com/ccalvin97/CV-Semantic-Segmentation-Land/blob/main/graph/Picture1.jpg" height="400" />
 </figcaption>
 </figure>
 
-Besides, we further combine HRNet with [Object Contextual Representation](https://arxiv.org/pdf/1909.11065.pdf) and achieve higher performance on the three datasets. The code of HRNet+OCR is contained in this branch. We illustrate the overall framework of OCR in the Figure as shown below:
-
+### OCR   
 <figure>
   <text-align: center;>
-  <img src="./figures/OCR.PNG" alt="OCR" title="" width="900" height="200" />
+  <img src="https://github.com/ccalvin97/CV-Semantic-Segmentation-Land/blob/main/graph/Picture3.png" height="400" />
+</figcaption>
+</figure>
+<figure>
+  <text-align: center;>
+  <img src="https://github.com/ccalvin97/CV-Semantic-Segmentation-Land/blob/main/graph/Picture2.png" width="900" height="400" />
 </figure>
 
-## Segmentation models
-The models are initialized by the weights pretrained on the ImageNet. ''Paddle'' means the results are based on PaddleCls pretrained HRNet models.
-You can download the pretrained models from  https://github.com/HRNet/HRNet-Image-Classification. *Slightly different, we use align_corners = True for upsampling in HRNet*.
+## Pre-train Models  
 
-1. Performance on the Cityscapes dataset. The models are trained and tested with the input size of 512x1024 and 1024x2048 respectively.
-If multi-scale testing is used, we adopt scales: 0.5,0.75,1.0,1.25,1.5,1.75.
 
 | model | Train Set | Test Set | OHEM | Multi-scale| Flip | mIoU | Link |
 | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
 | HRNetV2-W48 | Train | Val | No | No | No | 80.9 | [Github](https://github.com/hsfzxjy/models.storage/releases/download/HRNet-OCR/hrnet_cs_8090_torch11.pth)/[BaiduYun(Access Code:pmix)](https://pan.baidu.com/s/1KyiOUOR0SYxKtJfIlD5o-w)|
 | HRNetV2-W48 + OCR | Train | Val | No | No | No | 81.6 | [Github](https://github.com/hsfzxjy/models.storage/releases/download/HRNet-OCR/hrnet_ocr_cs_8162_torch11.pth)/[BaiduYun(Access Code:fa6i)](https://pan.baidu.com/s/1BGNt4Xmx3yfXUS8yjde0hQ)|
 | HRNetV2-W48 + OCR | Train + Val | Test | No | Yes | Yes | 82.3 | [Github](https://github.com/hsfzxjy/models.storage/releases/download/HRNet-OCR/hrnet_ocr_cs_trainval_8227_torch11.pth)/[BaiduYun(Access Code:ycrk)](https://pan.baidu.com/s/16mD81UnGzjUBD-haDQfzIQ)|
+
+## Environments   
+
+Computer - Standard NC6s_v3    
+OS - Ubuntu 18.04  
+conda environment - py37_pytorch  
+CUDNN - 7.6.5  
+CUDA - 10.1.243  
+adal                         1.2.5
+alembic                      1.5.2
+anyio                        2.0.2
+applicationinsights          0.11.9
+argon2-cffi                  20.1.0
+async-generator              1.10
+attrs                        20.3.0
+azure-common                 1.1.26
+azure-graphrbac              0.61.1
+azure-mgmt-authorization     0.61.0
+azure-mgmt-containerregistry 2.8.0
+azure-mgmt-keyvault          2.2.0
+azure-mgmt-resource          12.0.0
+azure-mgmt-storage           11.2.0
+azureml-core                 1.20.0
+azureml-telemetry            1.20.0
+azureml-widgets              1.20.0
+Babel                        2.9.0
+backcall                     0.2.0
+backports.tempfile           1.0
+backports.weakref            1.0.post1
+bleach                       3.2.2
+brotlipy                     0.7.0
+certifi                      2020.12.5
+certipy                      0.1.3
+cffi                         1.14.4
+chardet                      4.0.0
+conda                        4.9.2
+conda-package-handling       1.7.2
+contextlib2                  0.6.0.post1
+cryptography                 3.3.1
+decorator                    4.4.2
+defusedxml                   0.6.0
+docker                       4.4.1
+entrypoints                  0.3
+idna                         2.10
+importlib-metadata           2.0.0
+ipykernel                    5.3.4
+ipython                      7.19.0
+ipython-genutils             0.2.0
+ipywidgets                   7.6.3
+isodate                      0.6.0
+jedi                         0.18.0
+jeepney                      0.6.0
+Jinja2                       2.11.2
+jmespath                     0.10.0
+json5                        0.9.5
+jsonpickle                   1.5.0
+jsonschema                   3.2.0
+jupyter-client               6.1.11
+jupyter-conda                3.4.1
+jupyter-core                 4.7.0
+jupyter-server               1.2.2
+jupyter-telemetry            0.1.0
+jupyterhub                   1.3.0
+jupyterlab                   3.0.5
+jupyterlab-pygments          0.1.2
+jupyterlab-server            2.1.2
+jupyterlab-widgets           1.0.0
+Mako                         1.1.4
+MarkupSafe                   1.1.1
+mistune                      0.8.4
+msrest                       0.6.19
+msrestazure                  0.6.4
+nb-conda-kernels             2.3.1
+nbclassic                    0.2.6
+nbclient                     0.5.1
+nbconvert                    6.0.7
+nbformat                     5.1.2
+ndg-httpsclient              0.5.1
+nest-asyncio                 1.4.3
+notebook                     6.2.0
+oauthlib                     3.1.0
+packaging                    20.8
+pamela                       1.0.0
+pandocfilters                1.4.3
+parso                        0.8.1
+pathspec                     0.8.1
+pexpect                      4.8.0
+pickleshare                  0.7.5
+pip                          20.3.3
+prometheus-client            0.9.0
+prompt-toolkit               3.0.11
+psutil                       5.8.0
+ptyprocess                   0.7.0
+pyasn1                       0.4.8
+pycosat                      0.6.3
+pycparser                    2.20
+Pygments                     2.7.4
+PyJWT                        1.7.1
+pyOpenSSL                    19.1.0
+pyparsing                    2.4.7
+pyrsistent                   0.17.3
+PySocks                      1.7.1
+python-dateutil              2.8.1
+python-editor                1.0.4
+python-json-logger           2.0.1
+pytz                         2020.5
+pyzmq                        21.0.1
+requests                     2.25.1
+requests-oauthlib            1.3.0
+ruamel-yaml                  0.15.87
+ruamel.yaml                  0.16.12
+ruamel.yaml.clib             0.2.2
+SecretStorage                3.3.0
+Send2Trash                   1.5.0
+setuptools                   51.3.3.post20210118
+six                          1.15.0
+sniffio                      1.2.0
+SQLAlchemy                   1.3.22
+sudospawner                  0.6.0.dev0
+terminado                    0.9.2
+testpath                     0.4.4
+tornado                      6.1
+tqdm                         4.55.1
+traitlets                    5.0.5
+urllib3                      1.26.2
+wcwidth                      0.2.5
+webencodings                 0.5.1
+websocket-client             0.57.0
+wheel                        0.36.2
+widgetsnbextension           3.5.1
+zipp                         3.4.0
 
 
 

@@ -28,12 +28,12 @@ Original Code from HRNet-OCR Official Github
 ### OCR   
 <figure>
   <text-align: center;>
-  <img src="https://github.com/ccalvin97/CV-Semantic-Segmentation-Land/blob/main/graph/Picture3.png" height="250" />
+  <img src="https://github.com/ccalvin97/CV-Semantic-Segmentation-Land/blob/main/graph/Picture3.png" height="200" />
 </figcaption>
 </figure>
 <figure>
   <text-align: center;>
-  <img src="https://github.com/ccalvin97/CV-Semantic-Segmentation-Land/blob/main/graph/Picture2.png" width="900" height="250" />
+  <img src="https://github.com/ccalvin97/CV-Semantic-Segmentation-Land/blob/main/graph/Picture2.png" width="900" height="200" />
 </figure>
 
 ## Pre-train Models  
@@ -168,17 +168,10 @@ zipp                         3.4.0
 
 ## Quick start
 ### Install
-1. For LIP dataset, install PyTorch=0.4.1 following the [official instructions](https://pytorch.org/). For Cityscapes and PASCAL-Context, we use PyTorch=1.1.0.
-2. `git clone https://github.com/HRNet/HRNet-Semantic-Segmentation $SEG_ROOT`
-3. Install dependencies: pip install -r requirements.txt
+$ Install dependencies: pip install -r requirements.txt
 
-If you want to train and evaluate our models on PASCAL-Context, you need to install [details](https://github.com/zhanghang1989/detail-api).
-````bash
-pip install git+https://github.com/zhanghang1989/detail-api.git#subdirectory=PythonAPI
-````
 
 ### Data preparation
-You need to download the [Cityscapes](https://www.cityscapes-dataset.com/), [LIP](http://sysu-hcp.net/lip/) and [PASCAL-Context](https://cs.stanford.edu/~roozbeh/pascal-context/) datasets.
 
 Your directory tree should be look like this:
 ````bash
@@ -195,18 +188,9 @@ $SEG_ROOT/data
 ````
 
 ### Train and Test
-
-#### PyTorch Version Differences
-
-Note that the codebase supports both PyTorch 0.4.1 and 1.1.0, and they use different command for training. In the following context, we use `$PY_CMD` to denote different startup command.
-
-```bash
-# For PyTorch 0.4.1
-PY_CMD="python"
-# For PyTorch 1.1.0
-PY_CMD="python -m torch.distributed.launch --nproc_per_node=4"
-```
-
+$ bash train_start.sh  
+$ bash est_start.sh   
+  
 
 ## Citation
 If you find this work or code is helpful in your research, please cite:

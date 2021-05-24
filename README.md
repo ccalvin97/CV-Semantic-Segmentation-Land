@@ -5,7 +5,6 @@ CV-Semantic-Segmentation-Land(Multi-class)
 ### Prediction Preformance   
 <div align="center"></center><img src="https://github.com/ccalvin97/CV-Semantic-Segmentation-Land/blob/main/graph/pred1.png" width="800"/></center>   
 
-<h1 style="text-align:left">
-Training / Validation
+</left>**Training / Validation**</left>
 
 <div align="center"><img src="https://github.com/ccalvin97/CV-Semantic-Segmentation-Land/blob/main/graph/train.png" width="400"/></center><img src="https://github.com/ccalvin97/CV-Semantic-Segmentation-Land/blob/main/graph/test.png" width="400"/></center>   

@@ -3,8 +3,7 @@ CV-Semantic-Segmentation-Land(Multi-class)
 
 
 ### Prediction Preformance   
-</center><img src="https://github.com/ccalvin97/CV-Semantic-Segmentation-Land/blob/main/graph/pred1.png" width="800"/></center> 
-      
+<img src="https://github.com/ccalvin97/CV-Semantic-Segmentation-Land/blob/main/graph/pred1.png" width="800"/>    
       
 ###Training / Validation 
 
